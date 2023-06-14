@@ -1,8 +1,14 @@
 import 'styled-components/native'
 
 declare module 'styled-components/native' {
-    export type ColorPalette = 'primary | secondary | onSecondary | caption | surface | brand | alert';
-
+    export type ColorPalette =
+        | "primary"
+        | "secondary"
+        | "onSecondary"
+        | "caption"
+        | "surface"
+        | "brand"
+        | "alert";
     export interface DefaultTheme {
         colors: {
             primary: string;

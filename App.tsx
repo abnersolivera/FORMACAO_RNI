@@ -1,28 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components/native';
+import  Container from './src/common/components/Container';
+import Spacer from './src/common/components/Spacer';
 import Text from './src/common/components/Text';
 import { defaultTheme } from './src/common/constants/styles/theme/defaultTheme';
-import Spacer from './src/common/components/Spacer';
 
 export default function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <View style={styles.container}>
-        <Text size={50} color='alert'>Text1</Text>
-        <Spacer height={2}/>
-        <Text size={50} color='alert'>Text2</Text>
-        <StatusBar style="inverted" />
-      </View>
+      <Container>
+        <Spacer height={30} />
+        <Text size={30} color='onSecondary'>Text1</Text>
+        <Spacer height={30} />
+        <Text size={30} color='onSecondary'>Text2</Text>
+      </Container>
     </ThemeProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

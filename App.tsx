@@ -1,5 +1,6 @@
 import { ThemeProvider } from 'styled-components/native';
 import Avatar from './src/common/components/Avatar';
+import BackButton from './src/common/components/BackButton';
 import Container from './src/common/components/Container';
 import Content from './src/common/components/Content';
 import Icon from './src/common/components/Icon';
@@ -13,6 +14,13 @@ export default function App() {
       <Container>
         <Content>
           <Spacer height={30} />
+          <Spacer height={20} />
+          <BackButton
+            onPress={() => {
+              console.log("clicou no botão")
+            }}
+          />
+          <Spacer height={20} />
           <Text size={30} color='onSecondary'>Text1</Text>
           <Icon icon="home" color='red' size={40}></Icon>
           <Spacer height={30} />

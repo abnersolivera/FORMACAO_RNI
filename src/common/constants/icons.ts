@@ -1,4 +1,3 @@
-
 import home from '../../assets/icons/home/Vector.png';
 import favorite from '../../assets/icons/favorite/Vector.png';
 import search from '../../assets/icons/search/Vector.png';
